@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { CharacterItem } from './CharacterItem';
 import { characters } from './characters';
 
 
@@ -19,19 +20,14 @@ useEffect(() => {
 }, [])
 
 
-
-
-
-//const numAleatory = (min, max) => {
-//  let aleatory = Math.floor((Math.random() * (max - min + 1)) + min);
-//  setNum(aleatory);
-//}
-
   return (
     <>
     <div className="container">
         <div className="div_item">
-         
+         <CharacterItem 
+         { ...characterPerson }
+         aleatory={ aleatory }
+         />
         </div>
     </div>
     </>
