@@ -1,4 +1,4 @@
-export const characters = [
+[
     {
       "id": 0,
       "firstName": "Daenerys",

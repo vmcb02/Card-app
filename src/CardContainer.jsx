@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { CharacterItem } from './CharacterItem';
-import { characters } from './characters';
+import  Characters  from './Characters';
 
 
 export const CardContainer = () => {
@@ -8,15 +8,15 @@ export const CardContainer = () => {
 const [characterPerson, setCharacterPerson] = useState({});
 
 
-const aleatory = () => {
- let characterId = Math.floor((Math.random() * characters.length  ));
- let randomCharacter = characters.find((item) => item.id === characterId);
+const onAleatory = () => {
+ let characterId = Math.floor((Math.random() * Characters.length  ));
+ let randomCharacter = Characters.find((item) => item.id === characterId);
  setCharacterPerson(randomCharacter);
  console.log(randomCharacter)
 }
 
 useEffect(() => {
-  aleatory()
+  onAleatory()
 }, [])
 
 
@@ -26,7 +26,7 @@ useEffect(() => {
         <div className="div_item">
          <CharacterItem 
          { ...characterPerson }
-         aleatory={ aleatory }
+         aleatory={ onAleatory }
          />
         </div>
     </div>
